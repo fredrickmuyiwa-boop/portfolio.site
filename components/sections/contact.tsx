@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import {
   Linkedin,
   Github,
@@ -24,9 +25,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { supabase } from '@/lib/supabase-client';
 import { toast } from 'sonner';
 import { siteConfig } from '@/lib/site';
+
+const EMAILJS_SERVICE_ID = 'service_vbxb7km';
+const EMAILJS_TEMPLATE_ID = 'template_j7eo3sq';
+const EMAILJS_PUBLIC_KEY = 'QgVSCqEERlDDf8Bgw';
+
+const RATE_LIMIT_MS = 30_000;
 
 const projectTypes = [
   'Business Analytics',
@@ -52,8 +58,10 @@ const socials = [
 ];
 
 export function Contact() {
+  const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
+  const [cooldown, setCooldown] = useState(false);
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -61,31 +69,61 @@ export function Contact() {
     project_type: '',
     budget: '',
     message: '',
+    honeypot: '',
   });
+
+  useEffect(() => {
+    if (!cooldown) return;
+    const timer = setTimeout(() => setCooldown(false), RATE_LIMIT_MS);
+    return () => clearTimeout(timer);
+  }, [cooldown]);
 
   const update = (key: string, value: string) =>
     setForm((f) => ({ ...f, [key]: value }));
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (loading || cooldown) return;
+
     if (!form.name || !form.email || !form.message) {
       toast.error('Please fill in your name, email, and message.');
       return;
     }
+
+    if (form.honeypot) return;
+
     setLoading(true);
     try {
-      const { error } = await supabase.from('contact_submissions').insert({
-        name: form.name,
-        email: form.email,
-        company: form.company || null,
-        project_type: form.project_type || null,
-        budget: form.budget || null,
-        message: form.message,
-      });
-      if (error) throw error;
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          company: form.company || 'Not provided',
+          project_type: form.project_type || 'Not specified',
+          budget: form.budget || 'Not specified',
+          message: form.message,
+          to_email: 'fredrickmuyiwa@gmail.com',
+        },
+        { publicKey: EMAILJS_PUBLIC_KEY }
+      );
+
       setDone(true);
-      toast.success('Message sent! I\'ll get back to you within 24 hours.');
-      setForm({ name: '', email: '', company: '', project_type: '', budget: '', message: '' });
+      toast.success("Message sent! I'll get back to you within 24 hours.");
+      setForm({
+        name: '',
+        email: '',
+        company: '',
+        project_type: '',
+        budget: '',
+        message: '',
+        honeypot: '',
+      });
+      setCooldown(true);
+
+      setTimeout(() => setDone(false), 4000);
     } catch {
       toast.error('Something went wrong. Please try again or email me directly.');
     } finally {
@@ -110,9 +148,23 @@ export function Contact() {
           {/* Form */}
           <Reveal className="lg:col-span-3">
             <form
+              ref={formRef}
               onSubmit={handleSubmit}
               className="glass card-glow rounded-3xl p-8"
             >
+              {/* Honeypot field — hidden from users, bots fill it */}
+              <div className="absolute left-[-9999px] top-[-9999px]" aria-hidden="true">
+                <label htmlFor="website">Website</label>
+                <input
+                  id="website"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={form.honeypot}
+                  onChange={(e) => update('honeypot', e.target.value)}
+                />
+              </div>
+
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="name">Name *</Label>
@@ -195,7 +247,7 @@ export function Contact() {
 
               <Button
                 type="submit"
-                disabled={loading}
+                disabled={loading || cooldown}
                 size="lg"
                 className="mt-6 w-full bg-brand-gradient text-white shadow-lg shadow-primary/25 hover:opacity-90"
               >
@@ -208,6 +260,11 @@ export function Contact() {
                   <>
                     <CheckCircle2 className="mr-2 h-4 w-4" />
                     Sent!
+                  </>
+                ) : cooldown ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4" />
+                    Please wait 30s...
                   </>
                 ) : (
                   <>
