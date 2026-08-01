@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Fredrick Muyiwa portfolio">
+  <defs>
+    <linearGradient id="ogbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0B12"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="ogtext" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#ogbg)"/>
+  <circle cx="200" cy="150" r="200" fill="#6D28D9" opacity="0.15"/>
+  <circle cx="1000" cy="500" r="180" fill="#A855F7" opacity="0.12"/>
+  <rect x="100" y="200" width="80" height="80" rx="20" fill="url(#ogtext)"/>
+  <text x="100" y="350" fill="#fff" font-size="52" font-weight="bold" font-family="sans-serif">Fredrick Muyiwa</text>
+  <text x="100" y="410" fill="#A1A1AA" font-size="24" font-family="sans-serif">Business Analyst • Web Developer • GHL Automation Expert</text>
+  <text x="100" y="470" fill="url(#ogtext)" font-size="20" font-weight="600" font-family="sans-serif">Data • Technology • Automation</text>
+</svg>

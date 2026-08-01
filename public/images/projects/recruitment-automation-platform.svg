@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420" role="img" aria-label="Recruitment Platform preview">
+  <defs>
+    <linearGradient id="bg-recruitment-automation-platform" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0B12"/>
+      <stop offset="100%" stop-color="#13131D"/>
+    </linearGradient>
+    <radialGradient id="glow-recruitment-automation-platform" cx="0.5" cy="0.3" r="0.6">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="420" fill="url(#bg-recruitment-automation-platform)"/>
+  <rect width="600" height="420" fill="url(#glow-recruitment-automation-platform)"/>
+  
+        <rect x="40" y="100" width="88" height="280" rx="10" fill="#13131D" stroke="#2a2a3e" stroke-width="1"/>
+        <text x="84" y="124" fill="#A1A1AA" font-size="10" text-anchor="middle" font-family="sans-serif">Applied</text>
+        <text x="84" y="148" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle" font-family="sans-serif">120</text>
+        <rect x="48" y="168" width="72" height="40" rx="6" fill="#6366F1" opacity="0.3"/><rect x="48" y="218" width="72" height="40" rx="6" fill="#6366F1" opacity="0.44999999999999996"/><rect x="48" y="268" width="72" height="40" rx="6" fill="#6366F1" opacity="0.6"/><rect x="48" y="318" width="72" height="40" rx="6" fill="#6366F1" opacity="0.75"/>
+      
+        <rect x="144" y="100" width="88" height="280" rx="10" fill="#13131D" stroke="#2a2a3e" stroke-width="1"/>
+        <text x="188" y="124" fill="#A1A1AA" font-size="10" text-anchor="middle" font-family="sans-serif">Screened</text>
+        <text x="188" y="148" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle" font-family="sans-serif">80</text>
+        <rect x="152" y="168" width="72" height="40" rx="6" fill="#6366F1" opacity="0.3"/><rect x="152" y="218" width="72" height="40" rx="6" fill="#6366F1" opacity="0.44999999999999996"/><rect x="152" y="268" width="72" height="40" rx="6" fill="#6366F1" opacity="0.6"/><rect x="152" y="318" width="72" height="40" rx="6" fill="#6366F1" opacity="0.75"/>
+      
+        <rect x="248" y="100" width="88" height="280" rx="10" fill="#13131D" stroke="#2a2a3e" stroke-width="1"/>
+        <text x="292" y="124" fill="#A1A1AA" font-size="10" text-anchor="middle" font-family="sans-serif">Interview</text>
+        <text x="292" y="148" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle" font-family="sans-serif">45</text>
+        <rect x="256" y="168" width="72" height="40" rx="6" fill="#6366F1" opacity="0.3"/><rect x="256" y="218" width="72" height="40" rx="6" fill="#6366F1" opacity="0.44999999999999996"/><rect x="256" y="268" width="72" height="40" rx="6" fill="#6366F1" opacity="0.6"/><rect x="256" y="318" width="72" height="40" rx="6" fill="#6366F1" opacity="0.75"/>
+      
+        <rect x="352" y="100" width="88" height="280" rx="10" fill="#13131D" stroke="#2a2a3e" stroke-width="1"/>
+        <text x="396" y="124" fill="#A1A1AA" font-size="10" text-anchor="middle" font-family="sans-serif">Offer</text>
+        <text x="396" y="148" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle" font-family="sans-serif">20</text>
+        <rect x="360" y="168" width="72" height="40" rx="6" fill="#6366F1" opacity="0.3"/><rect x="360" y="218" width="72" height="40" rx="6" fill="#6366F1" opacity="0.44999999999999996"/><rect x="360" y="268" width="72" height="40" rx="6" fill="#6366F1" opacity="0.6"/><rect x="360" y="318" width="72" height="40" rx="6" fill="#6366F1" opacity="0.75"/>
+      
+        <rect x="456" y="100" width="88" height="280" rx="10" fill="#13131D" stroke="#2a2a3e" stroke-width="1"/>
+        <text x="500" y="124" fill="#A1A1AA" font-size="10" text-anchor="middle" font-family="sans-serif">Hired</text>
+        <text x="500" y="148" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle" font-family="sans-serif">12</text>
+        <rect x="464" y="168" width="72" height="40" rx="6" fill="#6366F1" opacity="0.3"/><rect x="464" y="218" width="72" height="40" rx="6" fill="#6366F1" opacity="0.44999999999999996"/><rect x="464" y="268" width="72" height="40" rx="6" fill="#6366F1" opacity="0.6"/><rect x="464" y="318" width="72" height="40" rx="6" fill="#6366F1" opacity="0.75"/>
+      
+</svg>

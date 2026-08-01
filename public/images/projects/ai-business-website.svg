@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420" role="img" aria-label="AI Business Website preview">
+  <defs>
+    <linearGradient id="bg-ai-business-website" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0B12"/>
+      <stop offset="100%" stop-color="#13131D"/>
+    </linearGradient>
+    <radialGradient id="glow-ai-business-website" cx="0.5" cy="0.3" r="0.6">
+      <stop offset="0%" stop-color="#A855F7" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#A855F7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="420" fill="url(#bg-ai-business-website)"/>
+  <rect width="600" height="420" fill="url(#glow-ai-business-website)"/>
+  
+      <rect x="40" y="80" width="520" height="340" rx="12" fill="#13131D" stroke="#2a2a3e" stroke-width="1"/>
+      <rect x="40" y="80" width="520" height="48" rx="12" fill="#1a1a2e"/>
+      <circle cx="64" cy="104" r="6" fill="#A855F7"/>
+      <rect x="80" y="98" width="80" height="12" rx="4" fill="#3a3a4e"/>
+      <rect x="420" y="94" width="50" height="20" rx="6" fill="#A855F7"/>
+      <rect x="480" y="94" width="50" height="20" rx="6" fill="#2a2a3e"/>
+      <text x="300" y="180" fill="#fff" font-size="28" font-weight="bold" text-anchor="middle" font-family="sans-serif">Transform Your</text>
+      <text x="300" y="215" fill="#A855F7" font-size="28" font-weight="bold" text-anchor="middle" font-family="sans-serif">Business with AI</text>
+      <rect x="220" y="250" width="160" height="40" rx="8" fill="#A855F7"/>
+      <text x="300" y="275" fill="#fff" font-size="13" text-anchor="middle" font-family="sans-serif">Get Started Free</text>
+      <rect x="100" y="330" width="120" height="60" rx="10" fill="#1a1a2e" stroke="#2a2a3e"/>
+      <rect x="240" y="330" width="120" height="60" rx="10" fill="#1a1a2e" stroke="#2a2a3e"/>
+      <rect x="380" y="330" width="120" height="60" rx="10" fill="#1a1a2e" stroke="#2a2a3e"/>
+    
+</svg>

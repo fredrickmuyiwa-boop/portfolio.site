@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420" role="img" aria-label="Sales Funnel preview">
+  <defs>
+    <linearGradient id="bg-sales-funnel-automation" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0B12"/>
+      <stop offset="100%" stop-color="#13131D"/>
+    </linearGradient>
+    <radialGradient id="glow-sales-funnel-automation" cx="0.5" cy="0.3" r="0.6">
+      <stop offset="0%" stop-color="#C026D3" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#C026D3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="420" fill="url(#bg-sales-funnel-automation)"/>
+  <rect width="600" height="420" fill="url(#glow-sales-funnel-automation)"/>
+  
+        <rect x="60" y="90" width="480" height="56" rx="8" fill="#C026D3" opacity="0.25"/>
+        <text x="80" y="124" fill="#fff" font-size="14" font-weight="bold" font-family="sans-serif">Leads</text>
+        <text x="520" y="124" fill="#fff" font-size="14" font-weight="bold" text-anchor="end" font-family="sans-serif">1,200</text>
+      
+        <rect x="110" y="162" width="380" height="56" rx="8" fill="#C026D3" opacity="0.4"/>
+        <text x="130" y="196" fill="#fff" font-size="14" font-weight="bold" font-family="sans-serif">Qualified</text>
+        <text x="470" y="196" fill="#fff" font-size="14" font-weight="bold" text-anchor="end" font-family="sans-serif">740</text>
+      
+        <rect x="160" y="234" width="280" height="56" rx="8" fill="#C026D3" opacity="0.55"/>
+        <text x="180" y="268" fill="#fff" font-size="14" font-weight="bold" font-family="sans-serif">Demo</text>
+        <text x="420" y="268" fill="#fff" font-size="14" font-weight="bold" text-anchor="end" font-family="sans-serif">420</text>
+      
+        <rect x="210" y="306" width="180" height="56" rx="8" fill="#C026D3" opacity="0.7"/>
+        <text x="230" y="340" fill="#fff" font-size="14" font-weight="bold" font-family="sans-serif">Proposal</text>
+        <text x="370" y="340" fill="#fff" font-size="14" font-weight="bold" text-anchor="end" font-family="sans-serif">180</text>
+      
+        <rect x="250" y="378" width="100" height="56" rx="8" fill="#C026D3" opacity="0.85"/>
+        <text x="270" y="412" fill="#fff" font-size="14" font-weight="bold" font-family="sans-serif">Closed</text>
+        <text x="330" y="412" fill="#fff" font-size="14" font-weight="bold" text-anchor="end" font-family="sans-serif">72</text>
+      
+</svg>
